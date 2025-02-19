@@ -36,23 +36,7 @@ h2.display-3 {
     border-radius: 8px;
 }
 
-@media(max-width: 850px){
-    .hideonmobile{
-        display: none;
-    }
-    .menubutton{
-        display: block;
-    }
 
-
-}
-
-@media(max-width: 400px){
-    .sidebar{
-        width: 100%;
-       
-    }
-}
 
 .osa-knapp {
     display: inline-block;
@@ -67,5 +51,20 @@ h2.display-3 {
     text-align: center;
 }
 
+/* Gör så att hela <a> taggen täcker kortet */
+a {
+    display: block; /* Gör hela <a> taggen till ett block så att hela kortet är klickbart */
+    text-decoration: none; /* Tar bort understrykning på texten i kortet */
+}
 
+/* För att kortet ska ge ett klickbart cursor-beteende */
+.card {
+    cursor: pointer; /* Gör att hela kortet visar att det är klickbart */
+}
 
+/* Tar bort eventuella hinder från bilden */
+.card img {
+    pointer-events: none; /* Så att användaren kan klicka på kortet utan att bilden hindrar länken */
+}
+
+ 
