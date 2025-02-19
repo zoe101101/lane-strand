@@ -67,4 +67,41 @@ a {
     pointer-events: none; /* Så att användaren kan klicka på kortet utan att bilden hindrar länken */
 }
 
+#countdown {
+    font-size: 1.5rem;
+    color: #333; /* Mörk text för att skapa bra kontrast */
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .calendar-box {
+    display: inline-block;
+    background-color: #f9f9f9; /* Ljus bakgrund för kalenderkänsla */
+    border: 2px solid #dcdcdc; /* Ljusgrå border, som en kalenderram */
+    border-radius: 8px; /* Rundade hörn */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lätt skugga för att skapa en upphöjd effekt */
+  }
+  
+  .calendar-date {
+    display: block;
+    font-size: 3rem; /* Större siffror för att framhäva antalet dagar */
+    font-weight: 600; /* Lite fetare siffror */
+    color: #2c3e50; /* En elegant blå färg */
+  }
+  
+  .calendar-text {
+    font-size: 1.2rem;
+    color: #7f8c8d; /* Dämpad grå färg för texten */
+    margin-top: 10px;
+    font-weight: 400;
+  }
+  
+  .calendar-box:hover {
+    transform: scale(1.05); /* Lätt förstoring vid hover för interaktivitet */
+    transition: transform 0.3s ease;
+  }
+  
+
  
