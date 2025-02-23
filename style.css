@@ -2,9 +2,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    
 
     
 }
+
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -13,7 +15,38 @@ body {
     color: #333;
     padding: 20px;
 
+
 }
+
+.huvud {
+    position: relative; /* Behövs för att kunna placera överlagringen korrekt */
+    background-image: url('img/j+g.jpg'); /* Din bakgrundsbild */
+    background-size: cover; /* Gör så att bilden täcker hela div:en */
+    background-position: center center; /* Centrerar bilden */
+    padding: 50px 0; /* Padding för att ge utrymme på toppen och botten */
+    color: white; /* Justera textfärgen för bättre läsbarhet */
+}
+
+.huvud::after {
+    content: ''; /* Pseudo-element krävs för att skapa överlagring */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Svart bakgrund med 50% opacity */
+    z-index: 1; /* Placera överlagringen bakom innehållet */
+}
+
+.container {
+    position: relative; /* Så att texten hamnar ovanpå bakgrundens överlagring */
+    z-index: 2; /* Höjer texten ovanför överlagringen */
+}
+
+    
+
+
+
 
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
@@ -38,19 +71,22 @@ h2.display-3 {
 
 
 
-.osa-knapp {
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 18px;
-    color: white;
-    background-color: #007bff; /* Blå färg, ändra om du vill */
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-    text-align: center;
+.custom-btn {
+    background-color: #93b37d; /* Sage green färg */
+    color: white; /* Textfärg */
+    font-size: 1.2rem; /* Storlek på texten */
+    padding: 12px 24px; /* Avstånd runt texten */
+    border: none; /* Tar bort standardkant */
+    border-radius: 8px; /* Gör hörnen rundade */
+    cursor: pointer; /* Ändrar muspekaren */
+    transition: background-color 0.3s ease-in-out;
+    text-decoration: none; /* Tar bort understrykning om det är en länk */
+    display: inline-block; /* Ser till att den inte bryts */
 }
 
+.custom-btn:hover {
+    background-color: #4f8848; /* Mörkare variant av sage green vid hover */
+}
 /* Gör så att hela <a> taggen täcker kortet */
 a {
     display: block; /* Gör hela <a> taggen till ett block så att hela kortet är klickbart */
@@ -66,6 +102,7 @@ a {
 .card img {
     pointer-events: none; /* Så att användaren kan klicka på kortet utan att bilden hindrar länken */
 }
+
 
 #countdown {
     font-size: 1.5rem;
